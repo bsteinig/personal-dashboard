@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500;600&family=Inter:wght@300;400;500;600&display=swap');
+
+:root{ /* Global Styles */
+    --display-font: 'Inter',-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --text-font: 'Fira Code', 'Courier New', Courier, monospace;
+    --red: #ee6b73;
+    --orange: #faad59;
+    --yellow: #ffcc66;
+    --light-yellow: #ffd580;
+    --purple: #c3a6ff;
+    --blue: #63cae1;
+    --white: #d7dce2;
+    --lightest-gray: #a2aabc;
+    --med-gray: #6679a4;
+    --light-navy: #2f3b54;
+    --darkest-navy: #171c28;
+}
+
+
+*{ 
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    background: linear-gradient(0deg, rgba(23,28,40,1) 0%, rgba(47,59,84,1) 100%);
+    min-height: 100vh;
+}
+
+.cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 2rem;
+
+}
+
+
+/* Welcome Component */
+
+.welcome{
+    margin: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.greeting{
+    font-family: var(--text-font);
+    font-weight: 500;
+    font-size: 3rem;
+    color: var(--yellow);
+    z-index: 0;
+}
+
+.dig-clock{
+    font-family: var(--display-font);
+    font-weight: 600;
+    font-size: 3rem;
+    margin: .5rem;
+    padding: .75rem;
+    color: var(--lightest-gray);
+    display: flex;
+    width: 37.5rem;
+    justify-content: space-between;
+    border-radius: 2rem;
+    background: linear-gradient(145deg, #323f5a, #2a354c);
+    box-shadow:  2rem 2rem 4.2rem #252f42,
+             -2.1rem -2.1rem 4.2rem #394766;
+    z-index: -1;
+}
+
+/* Current Date Snippet */
+
+.current-date{
+    font-family: var(--display-font);
+    font-weight: 400;
+    font-size: 2rem;
+    color: var(--white);
+    z-index: 0;
+}   
+
+.weekend-day{
+    color: var(--purple);
+    font-weight: 500;
+}
+
+.weekday-day{
+    color: var(--light-yellow);
+    font-weight: 500;
+}
+
+/* Weather Component */
+
+.weather-card {
+    
+    background: linear-gradient(165deg, #2f3b54, #171c28);
+    box-shadow:  1rem 1rem 2.1rem #0d0f13,
+             -1rem -1rem 1.75rem #3d4b6d;
+    
+    width: 90rem;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--light-navy);
+    border-radius: 2rem;
+    padding: 1rem;
+
+    font-family: var(--display-font);
+    color: var(--lightest-gray);
+    overflow: hidden;
+}
+
+.weather-now{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 1rem;
+    border-right: 2px solid var(--light-navy);
+    width: 16rem;
+}
+
+.weather-loc{
+    font-weight: 500;
+    color: var(--white);
+    padding-bottom: .5rem;
+}
+
+.weather-heading{
+    font-weight: 500;
+    font-size: 2rem;
+    font-family: var(--display-font);
+    color: var(--white);
+    padding-bottom: .75rem;
+}
+
+.weather-stack{
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+    width: 67rem;
+}
+
+/* Current Conditions */
+
+.curr-conditions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.desc{
+    font-weight: 300 !important;
+    font-size: 1.45rem !important;
+}
+
+.temp {
+    font-weight: 600;
+    font-size: 2.75rem;
+}
+
+.hot{
+ color: var(--red);
+}
+
+.warm{
+ color: var(--orange);
+}
+
+.cool{
+    color: var(--blue);
+}
+
+.cold{
+    color: var(--purple);
+}
+
+/* Sunrise / Sunset */
+
+.ssRow {
+    display: flex;
+    align-items: center;
+    margin-bottom: .75rem;
+}
+
+.ssText{
+    margin-left: 1rem;
+    font-weight: 400;
+    font-size: 1.7rem;
+}
+
+/* Hourly Weather */
+
+.hourly-weather{
+    z-index: 2;
+}
+
+.hourly-slider{
+   margin: .5rem 0rem;
+}
+
+.hour-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 10rem;   
+}
+
+.time-text{
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.desc-hourly{
+    font-weight: 300 !important;
+    font-size: 1.1rem !important;
+    padding: .25rem 0;
+}
+
+.temp-hourly{
+    font-weight: 600;
+    font-size: 1.75rem;
+}
